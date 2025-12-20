@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singly Linked List Mind Map</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Singly Linked List Interactive Mind Map</h1>
+            <div class="header-buttons">
+                <button id="explore-btn">Explore Demo</button>
+                <button id="theme-toggle">Toggle Theme</button>
+            </div>
+        </header>
+        <div class="content">
+            <div class="mind-map-container">
+                <div class="waterfall-layout">
+                    <!-- Main Title -->
+                    <div class="main-title" data-aos="fade-down" data-aos-duration="600">
+                        <div class="title-content">
+                            <span class="icon">🔗</span>
+                            <span class="title">Singly Linked List</span>
+                        </div>
+                    </div>
+
+                    <!-- Phase 1: Concept -->
+                    <div class="phase concept-phase" data-aos="fade-up" data-aos-duration="600" data-aos-delay="50">
+                        <div class="phase-header">
+                            <span class="phase-icon">💡</span>
+                            <h2>Phase 1: Concept</h2>
+                        </div>
+                        <div class="phase-content">
+                            <div class="section definition" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
+                                <div class="section-header">
+                                    <span class="icon">📖</span>
+                                    <h3>Definition</h3>
+                                </div>
+                                <div class="pills">
+                                    <div class="pill">Sequence of nodes</div>
+                                    <div class="pill">Each node contains Data + Next pointer</div>
+                                </div>
+                            </div>
+                            <div class="arrow-down" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="150">↓</div>
+                            <div class="section structure" data-aos="fade-down" data-aos-duration="500" data-aos-delay="200">
+                                <div class="section-header">
+                                    <span class="icon">🏗️</span>
+                                    <h3>Structure</h3>
+                                </div>
+                                <div class="pills">
+                                    <div class="pill">Head node</div>
+                                    <div class="pill">Node = Data + Next</div>
+                                    <div class="pill">NULL at the end</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2: Action -->
+                    <div class="phase action-phase" data-aos="fade-up" data-aos-duration="600" data-aos-delay="250">
+                        <div class="phase-header">
+                            <span class="phase-icon">⚡</span>
+                            <h2>Phase 2: Action</h2>
+                        </div>
+                        <div class="phase-content">
+                            <div class="section operations" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+                                <div class="section-header">
+                                    <span class="icon">⚙️</span>
+                                    <h3>Operations</h3>
+                                </div>
+                                <div class="pills">
+                                    <div class="pill">Insertion</div>
+                                    <div class="pill">Deletion</div>
+                                    <div class="pill">Traversal</div>
+                                    <div class="pill">Searching</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3: Analysis -->
+                    <div class="phase analysis-phase" data-aos="fade-up" data-aos-duration="600" data-aos-delay="350">
+                        <div class="phase-header">
+                            <span class="phase-icon">⚖️</span>
+                            <h2>Phase 3: Analysis</h2>
+                        </div>
+                        <div class="phase-content comparison">
+                            <div class="section advantages" data-aos="fade-right" data-aos-duration="500" data-aos-delay="400">
+                                <div class="section-header">
+                                    <span class="icon">✅</span>
+                                    <h3>Advantages</h3>
+                                </div>
+                                <div class="pills">
+                                    <div class="pill">Dynamic size</div>
+                                    <div class="pill">Efficient insertion & deletion</div>
+                                </div>
+                            </div>
+                            <div class="vs-connector" data-aos="zoom-in" data-aos-duration="400" data-aos-delay="450">
+                                <span>VS</span>
+                            </div>
+                            <div class="section disadvantages" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500">
+                                <div class="section-header">
+                                    <span class="icon">❌</span>
+                                    <h3>Disadvantages</h3>
+                                </div>
+                                <div class="pills">
+                                    <div class="pill">No random access</div>
+                                    <div class="pill">Extra memory for pointers</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4: Real World -->
+                    <div class="phase realworld-phase" data-aos="fade-up" data-aos-duration="600" data-aos-delay="550">
+                        <div class="phase-header">
+                            <span class="phase-icon">🌍</span>
+                            <h2>Phase 4: Real World</h2>
+                        </div>
+                        <div class="phase-content">
+                            <div class="section applications" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+                                <div class="section-header">
+                                    <span class="icon">🌍</span>
+                                    <h3>Applications</h3>
+                                </div>
+                                <div class="pills">
+                                    <div class="pill">Music playlists</div>
+                                    <div class="pill">Browser history</div>
+                                    <div class="pill">Undo/Redo operations</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for topic details -->
+        <div id="topic-modal" class="modal-overlay">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modal-title">Topic Details</h2>
+                    <button id="close-modal" class="close-btn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="explanation" id="modal-explanation">
+                        <h3>Welcome</h3>
+                        <p>Click on any node in the mind map to explore Singly Linked Lists. Hover over nodes for quick previews.</p>
+                    </div>
+                    <div class="visualization" id="modal-visualization">
+                        <h3>Interactive Linked List Demo</h3>
+                        <div class="controls">
+                            <button id="insert-btn">Insert Node</button>
+                            <button id="delete-btn">Delete Node</button>
+                            <button id="traverse-btn">Traverse</button>
+                            <button id="reset-btn">Reset</button>
+                        </div>
+                        <div class="linked-list" id="linked-list">
+                            <!-- Nodes will be added here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\ashha\OneDrive\Desktop\Singly-Linked-List\index.html
