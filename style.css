@@ -171,6 +171,28 @@ h1 {
     box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
 }
 
+#about-btn,
+#home-btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 15px rgba(155, 89, 182, 0.3);
+}
+
+#about-btn:hover,
+#home-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(155, 89, 182, 0.4);
+}
+
 .content {
     display: flex;
     gap: 30px;
@@ -1689,6 +1711,357 @@ h1 {
     }
 }
 
+/* About Page Styles */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 32px var(--shadow);
+}
+
+.profile-image {
+    margin-bottom: 20px;
+}
+
+.profile-placeholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-name {
+    font-size: 2.5em;
+    margin: 15px 0 10px 0;
+    background: linear-gradient(45deg, var(--accent-color), var(--highlight-color), #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.profile-title {
+    font-size: 1.2em;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-style: italic;
+    margin: 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 8px 32px var(--shadow);
+    border-left: 4px solid var(--accent-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-card:hover::before {
+    opacity: 1;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px var(--shadow);
+    border-left-color: var(--highlight-color);
+}
+
+.card-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.about-card h3 {
+    font-size: 1.8em;
+    margin: 0 0 15px 0;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.about-card p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+    color: white;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    font-size: 1.05em;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+.contact-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-link:hover {
+    color: var(--highlight-color);
+    border-bottom-color: var(--highlight-color);
+}
+
+/* About Page Responsive */
+@media (max-width: 768px) {
+    .profile-section {
+        padding: 25px 20px;
+    }
+
+    .profile-placeholder {
+        width: 120px;
+        height: 120px;
+        font-size: 3em;
+    }
+
+    .profile-name {
+        font-size: 2em;
+    }
+
+    .profile-title {
+        font-size: 1.1em;
+    }
+
+    .about-card {
+        padding: 25px 20px;
+    }
+
+    .about-card h3 {
+        font-size: 1.5em;
+    }
+
+    .card-icon {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-section {
+        padding: 20px 15px;
+    }
+
+    .profile-placeholder {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5em;
+    }
+
+    .profile-name {
+        font-size: 1.6em;
+    }
+
+    .profile-title {
+        font-size: 1em;
+    }
+
+    .about-card {
+        padding: 20px 15px;
+    }
+
+    .about-card h3 {
+        font-size: 1.3em;
+    }
+
+    .card-icon {
+        font-size: 1.8em;
+    }
+
+    .skills-list {
+        gap: 8px;
+    }
+
+    .skill-tag {
+        padding: 6px 14px;
+        font-size: 0.85em;
+    }
+
+    .contact-info p {
+        font-size: 0.95em;
+    }
+}
+
+/* Footer Styles */
+.site-footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 -4px 20px var(--shadow);
+    border-top: 2px solid rgba(74, 144, 226, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--highlight-color), var(--accent-color));
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-section {
+    width: 100%;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 0.95em;
+    color: var(--text-color);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.copyright-icon {
+    font-size: 1.1em;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.footer-subtext {
+    margin: 0;
+    font-size: 0.85em;
+    color: var(--text-color);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+    .site-footer {
+        margin-top: 40px;
+        padding: 25px 15px;
+    }
+
+    .footer-text {
+        font-size: 0.9em;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .footer-subtext {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        margin-top: 30px;
+        padding: 20px 12px;
+    }
+
+    .footer-text {
+        font-size: 0.85em;
+    }
+
+    .footer-subtext {
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 320px) {
+    .site-footer {
+        margin-top: 25px;
+        padding: 18px 10px;
+    }
+
+    .footer-text {
+        font-size: 0.8em;
+    }
+
+    .footer-subtext {
+        font-size: 0.7em;
+    }
+}
+
 /* Print styles */
 @media print {
     .waterfall-layout {
@@ -1707,4 +2080,35 @@ h1 {
     #theme-toggle {
         display: none !important;
     }
+
+    .site-footer {
+        display: none !important;
+    }
+}
+
+/* =====================================================
+   FIX: Clicks blocked by AOS transform stacking context
+   ===================================================== */
+
+/* Raise contact section above transformed layers */
+.about-card,
+.about-content,
+.contact-info,
+.contact-info p {
+    position: relative;
+    z-index: 10;
+}
+
+/* Force anchor tags to accept clicks */
+.contact-link {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+/* Remove transform ONLY from about-page animated cards */
+.about-card[data-aos],
+.about-content[data-aos] {
+    transform: none !important;
 }

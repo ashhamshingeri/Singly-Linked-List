@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Singly Linked List Mind Map</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>About Me</h1>
+            <div class="header-buttons">
+                <button id="theme-toggle">Toggle Theme</button>
+                <button id="home-btn">Back to Home</button>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="about-container">
+                <!-- Profile Section -->
+                <div class="profile-section" data-aos="fade-down" data-aos-duration="600">
+                    <div class="profile-image">
+                        <div class="profile-placeholder">👤</div>
+                    </div>
+                    <h2 class="profile-name">Mohammed Ashham Shingeri</h2>
+                    <p class="profile-title">Web Developer & Educator</p>
+                </div>
+
+                <!-- About Content -->
+                <div class="about-content" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+
+                    <div class="about-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <div class="card-icon">🎓</div>
+                        <h3>Education</h3>
+                        <p>
+                            B.Tech in Artificial Intelligence & Machine Learning (2024–2028)<br>
+                            Anjuman Institute of Technology and Management, Karnataka
+                        </p>
+                        <p>
+                            Pre-University (Computer Science) (2021–2023)<br>
+                            Anjuman Pre-University College, Karnataka
+                        </p>
+                    </div>
+
+                    <div class="about-card" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                        <div class="card-icon">📧</div>
+                        <h3>Contact</h3>
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> ashhamshingeri17@gmail.com</p>
+
+                            <p><strong>GitHub:</strong>
+                                <a href="https://github.com/ashhamshingeri" class="contact-link" target="_blank"
+                                    rel="noopener noreferrer">
+                                    github.com/ashhamshingeri
+                                </a>
+                            </p>
+
+                            <p><strong>LinkedIn:</strong>
+                                <a href="https://www.linkedin.com/in/ashham-shingeri-72b1bb377/" class="contact-link"
+                                    target="_blank" rel="noopener noreferrer">
+                                    linkedin.com/in/ashham-shingeri
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p class="footer-text">
+                        © <span id="current-year"></span> Singly Linked List Mind Map. All rights reserved.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <p class="footer-subtext">
+                        Educational Resource for Learning Data Structures
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+            easing: 'ease-out',
+            once: true,
+            offset: 50
+        });
+
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.body.dataset.theme =
+                document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+        });
+
+        document.getElementById('home-btn').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('current-year').textContent =
+            new Date().getFullYear();
+    </script>
+</body>
+
+</html>
