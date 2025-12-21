@@ -695,6 +695,38 @@ h1 {
     color: var(--text-color);
 }
 
+.explanation-section pre {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.explanation-section code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+.syntax-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.syntax-btn:hover {
+    background: var(--highlight-color);
+}
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(20px);
