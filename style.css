@@ -1760,7 +1760,32 @@ h1 {
 }
 
 .profile-image {
-    margin-bottom: 20px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5aa9e6, #6bcf63);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+
+/* Inner image */
+.profile-image img {
+    width: 92%;
+    height: 92%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+    background: transparent;
+}
+
+
+
+.profile-image img:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease;
 }
 
 .profile-placeholder {
